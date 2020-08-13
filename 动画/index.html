@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body, html {height: 100%; }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .circle {
+        width: 120px;
+        height: 120px;
+        -moz-border-radius: 60px;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+    } 
+     
+    @keyframes toleft
+    { 
+        0%   { margin-left:60px; }
+        50%  { margin-left:-60px;}
+        100% { margin-left:60px; }
+    } 
+    @-webkit-keyframes toleft /* Safari 与 Chrome */
+    {
+        0%   { margin-left:60px; }
+        50%  { margin-left:-60px; }
+        100% { margin-left:60px; }
+    }
+
+    @keyframes toright
+    { 
+        0%   { margin-left:-60px; }
+        50%  { margin-left:60px; }
+        100% { margin-left:-60px; }
+    } 
+    @-webkit-keyframes toright /* Safari 与 Chrome */
+    {
+        0%   { margin-left:-60px; }
+        50%  { margin-left:60px; }
+        100% { margin-left:-60px; }
+    }
+
+
+    .toleft{
+        animation: toleft 3s;
+        -webkit-animation: toleft 3s; 
+        animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite; /*Safari and Chrome*/
+        animation-timing-function:linear;
+        -webkit-animation-timing-function:linear; 
+
+        opacity:50%;
+        
+        background-color: gold;
+        margin-left: 60px;
+        top: 0px;
+    }
+    .toright{
+        /* animation: toright 3s;
+        -webkit-animation: toright 3s;   */
+        animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite; /*Safari and Chrome*/
+        animation-timing-function:linear;
+        -webkit-animation-timing-function:linear; 
+        
+        opacity:50%;
+        
+        margin-left: -60px;
+        background-color: cornflowerblue;
+        top: 0px;
+    }
+    
+</style>
+
+<body>
+    <div class="main">
+        
+            <div class="circle   toleft"  >
+            
+            </div>
+
+        
+            <div class="circle toright ">
+             
+            </div>
+
+       
+       
+    </div>
+   
+</body>
+</html>
